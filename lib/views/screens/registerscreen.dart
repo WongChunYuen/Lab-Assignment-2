@@ -381,11 +381,15 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
               fontSize: 14.0);
           return;
         }
-
-        //print(response.body);
       });
     } catch (e) {
-      print(e.toString());
+      Fluttertoast.showToast(
+              msg: "Fail to register",
+              toastLength: Toast.LENGTH_SHORT,
+              gravity: ToastGravity.BOTTOM,
+              timeInSecForIosWeb: 1,
+              fontSize: 14.0);
+          return;
     }
   }
 }
