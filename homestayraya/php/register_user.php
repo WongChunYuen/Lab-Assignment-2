@@ -21,7 +21,7 @@ try {
 		sendJsonResponse($response);
 	} else {
 		$response = array('status' => 'failed', 'data' => null);
-
+		sendJsonResponse($response);
 	}
 	
 } catch (Exception $e) {
