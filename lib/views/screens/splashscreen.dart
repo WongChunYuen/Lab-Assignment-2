@@ -61,7 +61,7 @@ class _SplashScreenState extends State<SplashScreen> {
     // If the shared_preferences is not empty then login
     if (_email.isNotEmpty) {
       http.post(Uri.parse("${Config.server}/php/login_user.php"),
-          body: {"email": _email, "password": _pass}).then((response) {
+          body: {"email": _email, "password": _pass,"login": "login"}).then((response) {
         var jsonResponse = json.decode(response.body);
         if (response.statusCode == 200 && jsonResponse['status'] == "success") {
           User user = User.fromJson(jsonResponse['data']);
