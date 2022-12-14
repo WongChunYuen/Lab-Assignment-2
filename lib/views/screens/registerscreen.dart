@@ -210,7 +210,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
       return 'Please enter password';
     } else {
       if (!regex.hasMatch(value)) {
-        return 'Enter valid password';
+        return 'Required uppercase letter and minimum 10 length';
       } else {
         return null;
       }
