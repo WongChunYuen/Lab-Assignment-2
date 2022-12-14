@@ -65,7 +65,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                       controller: _nameEditingController,
                       keyboardType: TextInputType.text,
                       validator: (val) => val!.isEmpty || (val.length < 3)
-                          ? "name must be longer than 3"
+                          ? "Name must be longer than 3"
                           : null,
                       decoration: const InputDecoration(
                           labelText: 'Name',
@@ -80,7 +80,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                       validator: (val) => val!.isEmpty ||
                               !val.contains("@") ||
                               !val.contains(".")
-                          ? "enter a valid email"
+                          ? "Enter a valid email"
                           : null,
                       decoration: const InputDecoration(
                           labelText: 'Email',
