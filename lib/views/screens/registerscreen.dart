@@ -278,11 +278,8 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                   ),
                   onPressed: () {
                     Navigator.of(context).pop();
+                    Navigator.of(context).pop();
                     _registerUser(_name, _email, _phone, _passa);
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (content) => const LoginScreen()));
                   },
                 ),
                 TextButton(
@@ -384,12 +381,12 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
       });
     } catch (e) {
       Fluttertoast.showToast(
-              msg: "Fail to register",
-              toastLength: Toast.LENGTH_SHORT,
-              gravity: ToastGravity.BOTTOM,
-              timeInSecForIosWeb: 1,
-              fontSize: 14.0);
-          return;
+          msg: "Fail to register",
+          toastLength: Toast.LENGTH_SHORT,
+          gravity: ToastGravity.BOTTOM,
+          timeInSecForIosWeb: 1,
+          fontSize: 14.0);
+      return;
     }
   }
 }
